@@ -58,7 +58,7 @@ dmypy.json
 .ipynb_checkpoints
 
 # Environments
-.env
+# .env
 .env.*
 .venv/
 venv/
