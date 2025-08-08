@@ -21,8 +21,6 @@ class GetNoteSchema(BaseModel):
 class CreateNoteSchema(BaseModel):
     note_title: Optional[str]
     note_content: Optional[str]
-    created_on: Optional[datetime]
-    last_update: Optional[datetime]
 
     class Config:
         orm_mode = True 
@@ -33,8 +31,7 @@ class CreateNoteSchema(BaseModel):
 class UpdateNoteSchema(BaseModel):
     note_title: Optional[str]
     note_content: Optional[str]
-    created_on: Optional[datetime]
-    last_update: Optional[datetime]
+
 
     class Config:
         orm_mode = True 

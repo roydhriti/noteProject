@@ -14,9 +14,12 @@ def get_all_note(db: Session, current_user: UserModel):
             detail="Note not found"
         )
     
+    note_schema = [GetNoteSchema.from_orm(note) for note in getNote]
+
+    
     return {
         "message": "Note retrieved successfully",
-        "note": getNote
+        "note": note_schema
     }
 
 

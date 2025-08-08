@@ -16,14 +16,9 @@ class CreateUserSchema(BaseModel):
     user_name: Optional[str]
     email: Optional[str]
     password: Optional[str]
-    created_on: Optional[datetime]
-    last_update: Optional[datetime]
-
 
 class UpdateUserSchema(BaseModel): 
     user_name: Optional[str]
-    created_on: Optional[datetime]
-    last_update: Optional[datetime]
 
 
 class DeleteUserSchema(BaseModel):
@@ -32,3 +27,7 @@ class DeleteUserSchema(BaseModel):
 
 class UpdatePasswordSchema(BaseModel):
     password: Optional[str]
+    
+class Config:
+        orm_mode = True 
+        from_attributes = True

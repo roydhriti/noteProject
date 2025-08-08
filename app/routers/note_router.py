@@ -37,7 +37,7 @@ def update_existing_note_endpoint(
     return update_note(db, note_id, note_data, current_user)
 
 
-@router.delete("/{note_id}", response_model=DeleteNoteSchema)
+@router.delete("/delete/{note_id}", response_model=DeleteNoteSchema)
 def soft_delete_note_endpoint(
     note_id: int,
     db: Session = Depends(get_db),
